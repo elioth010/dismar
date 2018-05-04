@@ -22,51 +22,26 @@ export class HeaderComponent implements OnInit {
   taxonomies$: Observable<any>;
   taxonList = [{
     "id": 4,
-    "name": "Mugs",
-    "pretty_name": "Categories -> Mugs",
-    "permalink": "categories/mugs",
+    "name": "Product",
+    "pretty_name": "Categories -> Product",
+    "permalink": "categories/product",
     "parent_id": 1,
     "taxonomy_id": 1,
     "taxons": null},
   {
     "id": 3,
-    "name": "Bags",
-    "pretty_name": "Categories -> Bags",
-    "permalink": "categories/bags",
+    "name": "Brands",
+    "pretty_name": "Categories -> Brand",
+    "permalink": "categories/brand",
     "parent_id": 1,
     "taxonomy_id": 1,
     "taxons": null
   }, {
     "id": 8,
-    "name": "Ruby",
-    "pretty_name": "Brand -> Ruby",
-    "permalink": "brand/ruby",
-    "parent_id": 2,
-    "taxonomy_id": 2,
-    "taxons": null
-  }, {
-     "id": 9,
-    "name": "Apache",
-    "pretty_name": "Brand -> Apache",
-    "permalink": "brand/apache",
-    "parent_id": 2,
-    "taxonomy_id": 2,
-    "taxons": null
-  }, {
-    "id": 10,
-    "name": "Spree",
-    "pretty_name": "Brand -> Spree",
-    "permalink": "brand/spree",
-    "parent_id": 2,
-    "taxonomy_id": 2,
-    "taxons": null
-  }, {
-    "id": 11,
-    "name": "Rails",
-    "pretty_name": "Brand -> Rails",
-    "permalink": "brand/rails",
-    "parent_id": 2,
-    "taxonomy_id": 2,
+    "name": "Contact",
+    "pretty_name": "Contact",
+    "permalink": "contact",
+    "taxonomy_id": 1,
     "taxons": null
   }];
   constructor(

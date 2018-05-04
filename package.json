@@ -1,5 +1,5 @@
 {
-  "name": "angularspree",
+  "name": "dismar",
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
@@ -71,8 +71,7 @@
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
   },
-  "description": "Spree for Angular2",
+  "description": "Dismar front end",
   "main": "index.js",
-  "repository": "git@github.com:aviabird/angularspree.git",
-  "author": "Pankaj Rawat <pankajrawat19sept@gmail.com>"
+  "repository": "git@github.com:elioth010/dismar.git"
 }
