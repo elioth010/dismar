@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { AngularspreePage } from './app.po';
 
-describe('dismar App', () => {
-  let page: AppPage;
+describe('angularspree App', () => {
+  let page: AngularspreePage;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new AngularspreePage();
   });
 
-  it('should display welcome message', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
