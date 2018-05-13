@@ -1,11 +1,24 @@
+@import "variables";
+
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: "Whitney-semi-bold";
-    src: url("assets/WhitneyHTF-SemiBold.woff") format("woff")
+  font-family: "Whitney-semi-bold";
+  src: url("assets/WhitneyHTF-SemiBold.woff") format("woff")
 }
+
 @font-face {
-    font-family: "Whitney";
-    src: url("assets/WhitneyHTF-Book.woff") format("woff")
+  font-family: "Whitney";
+  src: url("assets/WhitneyHTF-Book.woff") format("woff")
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("assets/WebFonts/original_Montserrat-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("assets/WebFonts/original_Montserrat-Bold.woff") format("woff");
 }
 
 // bootstrap fonts
@@ -17,8 +30,11 @@ $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   font-size: 15px;
   line-height: 1.5;
-  color: #ebe0d7#fed;
-  background-color: #f9f8f6#fff;
+  color: #ebe0d7 #fed;
+  background: url("assets/bg.jpg") no-repeat;
+  background-size: auto;
+  background-position: top;
+  /*background-color: #f9f8f6#fff;*/
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,5 +67,5 @@ body {
 }
 
 html {
-overflow-y: scroll;
+  overflow-y: scroll;
 }

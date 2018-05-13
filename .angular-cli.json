@@ -28,7 +28,7 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "mock": "environments/environment.mock.ts",
-        "dev": "environments/environment.ts",        
+        "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
     }

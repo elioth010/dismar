@@ -1,4 +1,4 @@
-<div class="default">
+<!--<div class="default">
   <section>
     <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
     <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
@@ -12,4 +12,18 @@
     <app-checkout-footer *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-footer>
     <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
   </section>
+</div>-->
+<div class="container-fluid">
+  <div class="col-lg-2">
+    <app-nav-side></app-nav-side>
+  </div>
+  <div class="col-lg-10">
+
+    <div class="col-lg-6 col-lg-offset-5 welcome">
+      <h1>Bienvenido</h1>
+      <h1>a <span>Dismar</span></h1>
+      <button class="btn">Contactar</button>
+    </div>
+
+  </div>
 </div>

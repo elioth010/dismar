@@ -1,0 +1,23 @@
+.logo {
+  background: transparent url("../../../assets/logo.png") no-repeat;
+  background-size: contain;
+  background-position: center left;
+  height: 75px;
+  display: block;
+  margin-left: 15px;
+  margin-bottom: 50px;
+}
+
+.nav {
+  a {
+    color: #fff;
+    font-family: 'Montserrat-Thin', sans-serif;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      font-weight: 600;
+    }
+  }
+}

@@ -8,12 +8,14 @@ import { ProfileDropdownComponent } from './header/profile-dropdown/profile-drop
 // Modules
 import { SharedModule } from '../shared/index';
 import { RouterModule } from '@angular/router';
+import {NavSideComponent} from './nav-side/nav-side.component';
 
 @NgModule({
   declarations: [
     // components
     HeaderComponent,
     FooterComponent,
+    NavSideComponent,
 
     // sub components
     ProfileDropdownComponent
@@ -23,6 +25,7 @@ import { RouterModule } from '@angular/router';
   exports: [
     HeaderComponent,
     FooterComponent,
+    NavSideComponent,
   ],
   imports: [
     SharedModule,
