@@ -28,15 +28,19 @@ $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 @import "app/shared/scss/custom_bootstrap";
 
 body {
-  font-size: 15px;
   line-height: 1.5;
-  color: #ebe0d7 #fed;
+  color: #ebe0d7;
   background: url("assets/bg.jpg") no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: top;
   /*background-color: #f9f8f6#fff;*/
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6,label,p,span,div {
+  font-family: $primary-font;
+  font-size: 2rem;
 }
 
 .col-centered {

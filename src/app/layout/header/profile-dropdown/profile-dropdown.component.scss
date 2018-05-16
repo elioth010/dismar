@@ -1,3 +1,16 @@
+.nav {
+  > li {
+    > a {
+      color: #fff;
+      background-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
 .fa {
   font-size: 2rem;
 }

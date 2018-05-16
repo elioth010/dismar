@@ -19,11 +19,22 @@
   </div>
   <div class="col-lg-10">
 
-    <div class="col-lg-6 col-lg-offset-5 welcome">
-      <h1>Bienvenido</h1>
-      <h1>a <span>Dismar</span></h1>
-      <button class="btn">Contactar</button>
+    <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
+    <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
+    <app-loading-indicator></app-loading-indicator>
+    <app-notification></app-notification>
+
+    <!-- Bienvenido -->
+    <div class="row">
+      <div class="col-lg-6 col-lg-offset-5 welcome">
+        <h1>Bienvenido</h1>
+        <h1>a <span>Dismar</span></h1>
+        <button class="btn">Contactar</button>
+      </div>
     </div>
+
+    <!-- Nosotros -->
+      <app-about></app-about>
 
   </div>
 </div>
