@@ -1,3 +1,50 @@
+.nav-actions {
+  .search-bar {
+    input, a {
+      background-color: transparent;
+      border: none;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      &:focus {
+        & ~ a {
+          span {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+
+    a {
+      span {
+        color: #fff;
+        margin-left: -90px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      input, a {
+        background-color: #fff;
+
+        &::placeholder {
+          color: #000;
+        }
+      }
+
+      a {
+        span {
+          margin-left: 0px;
+        }
+      }
+    }
+
+
+  }
+}
+
 .navbar {
   height: 78px;
   border-bottom: 1px solid #69174e;
@@ -64,7 +111,7 @@
       border-color: #14cda8;
     }
   }
-  
+
   a.desktop-submit {
     box-sizing: content-box;
     display: inline-block;
