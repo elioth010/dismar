@@ -1,7 +1,7 @@
 <!--<div class="default">
   <section>
-    <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
-    <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
+    <app-navigation *ngIf="currentUrl && !isCheckoutRoute()"></app-navigation>
+    <app-checkout-navigation [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-navigation>
     <app-loading-indicator></app-loading-indicator>
     <app-notification></app-notification>
 
@@ -19,7 +19,7 @@
   </div>
   <div class="col-lg-10">
 
-    <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
+    <app-navigation *ngIf="currentUrl && !isCheckoutRoute()"></app-navigation>
     <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
     <app-loading-indicator></app-loading-indicator>
     <app-notification></app-notification>

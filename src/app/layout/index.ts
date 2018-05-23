@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 
 // Components
-import { HeaderComponent } from './header/header.component';
+import {NavigationComponent} from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProfileDropdownComponent } from './header/profile-dropdown/profile-dropdown.component';
+import { ProfileDropdownComponent } from './navigation/profile-dropdown/profile-dropdown.component';
 
 // Modules
 import { SharedModule } from '../shared/index';
@@ -13,7 +13,7 @@ import {NavSideComponent} from './nav-side/nav-side.component';
 @NgModule({
   declarations: [
     // components
-    HeaderComponent,
+    NavigationComponent,
     FooterComponent,
     NavSideComponent,
 
@@ -23,7 +23,7 @@ import {NavSideComponent} from './nav-side/nav-side.component';
     // pipes
   ],
   exports: [
-    HeaderComponent,
+    NavigationComponent,
     FooterComponent,
     NavSideComponent,
   ],
