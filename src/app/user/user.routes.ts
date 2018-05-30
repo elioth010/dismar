@@ -9,7 +9,7 @@ export const UserRoutes = [
     path: '',
     component: UserComponent,
     children: [
-      { path: '', redirectTo: 'orders' },
+      { path: '', redirectTo: 'orders', pathMatch: 'full'},
       { path: 'overview', component: OverviewComponent, redirectTo: 'orders' },
       { path: 'orders', component: OrdersComponent },
       { path: 'orders/detail/:number', component: OrderDetailComponent },

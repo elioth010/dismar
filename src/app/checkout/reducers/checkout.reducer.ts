@@ -18,7 +18,7 @@ export function reducer(state = initialState, { type, payload }: any): CheckoutS
 
       case CheckoutActions.FETCH_CURRENT_ORDER_SUCCESS:
         const _orderNumber = payload.number;
-        _lineItems = payload.line_items;
+        _lineItems = payload.line_items || [];
         _lineItemIds = _lineItems.map(lineItem => lineItem.id);
         _totalCartItems = payload.total_quantity;
         _totalCartValue = parseFloat(payload.total);

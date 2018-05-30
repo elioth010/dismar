@@ -4,12 +4,12 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
   font-family: "Whitney-semi-bold";
-  src: url("assets/WhitneyHTF-SemiBold.woff") format("woff")
+  src: url("assets/WhitneyHTF-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Whitney";
-  src: url("assets/WhitneyHTF-Book.woff") format("woff")
+  src: url("assets/WhitneyHTF-Book.woff") format("woff");
 }
 
 @font-face {
@@ -31,7 +31,8 @@ $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   line-height: 1.5;
   color: #ebe0d7;
-  background: url("assets/bg.jpg") no-repeat;
+  //background: url("assets/bg.jpg") no-repeat;
+  background-color: #1b6d85;
   background-size: cover;
   background-position: top;
   /*background-color: #f9f8f6#fff;*/

@@ -31,16 +31,18 @@ import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/of';
 import { AboutComponent } from './layout/about/about.component';
+import { WelcomeComponent } from './layout/welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckoutHeaderComponent,
     CheckoutFooterComponent,
-    AboutComponent
+    AboutComponent,
+    WelcomeComponent
   ],
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, { metaReducers }),
 
     /**
@@ -70,7 +72,7 @@ import { AboutComponent } from './layout/about/about.component';
     HomeModule,
     LayoutModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
