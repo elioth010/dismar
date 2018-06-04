@@ -31,16 +31,15 @@ $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   line-height: 1.5;
   color: #ebe0d7;
-  background: url("assets/bg.jpg") no-repeat;
   //background-color: #1b6d85;
+  //background-color: rgba(48, 210, 255, 0.5);
+  background: #1b6d85 url('assets/' + $background-primary) no-repeat top;
   background-size: cover;
-  background-position: top;
-  /*background-color: #f9f8f6#fff;*/
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,h2,h3,h4,h5,h6,label,p,span,div {
+h1, h2, h3, h4, h5, h6, label, p, span, div {
   font-family: $primary-font;
   font-size: 2rem;
 }

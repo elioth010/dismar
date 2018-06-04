@@ -1,7 +1,8 @@
+@import "../../../variables";
+
 .logo {
-  background: transparent url("../../../assets/logo.png") no-repeat;
+  //background: transparent url("../../../assets/" + $logo) no-repeat center left;
   background-size: contain;
-  background-position: center left;
   height: 75px;
   display: block;
   margin-left: 15px;
