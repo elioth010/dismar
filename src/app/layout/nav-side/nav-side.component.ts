@@ -8,6 +8,8 @@ import {AuthActions} from '../../auth/actions/auth.actions';
 import {AuthService} from '../../core/services/auth.service';
 import {SearchActions} from '../../home/reducers/search.actions';
 
+import { taxonomiList } from './shared/taxonomi-list';
+
 @Component({
   selector: 'app-nav-side',
   templateUrl: './nav-side.component.html',
@@ -15,38 +17,9 @@ import {SearchActions} from '../../home/reducers/search.actions';
 })
 export class NavSideComponent implements OnInit {
   taxonomies$: Observable<any>;
-  taxonList = [{
-    'id': 4,
-    'name': 'Inicio',
-    'pretty_name': 'Categories -> Product',
-    'permalink': 'categories/product',
-    'parent_id': 1,
-    'taxonomy_id': 1,
-    'taxons': null
-  },
-    {
-      'id': 3,
-      'name': 'Nosotros',
-      'pretty_name': 'Categories -> Brand',
-      'permalink': 'categories/brand',
-      'parent_id': 1,
-      'taxonomy_id': 1,
-      'taxons': null
-    }, {
-      'id': 8,
-      'name': 'productos',
-      'pretty_name': 'Contact',
-      'permalink': 'contact',
-      'taxonomy_id': 1,
-      'taxons': null
-    },{
-      'id': 10,
-      'name': 'Contacto',
-      'pretty_name': 'Contact',
-      'permalink': 'contact',
-      'taxonomy_id': 1,
-      'taxons': null
-    }];
+  taxonList = taxonomiList;
+
+  private isSelected;
 
   constructor(private store: Store<AppState>,
               private authService: AuthService,
@@ -62,5 +35,9 @@ export class NavSideComponent implements OnInit {
   selectTaxon(taxon) {
     this.router.navigateByUrl('/');
     this.store.dispatch(this.searchActions.addFilter(taxon));
+  }
+
+  activeIndicator(element) {
+    this.isSelected = element.id;
   }
 }

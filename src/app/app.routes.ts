@@ -4,6 +4,16 @@ import { CanActivateViaAuthGuard } from './core/guards/auth.guard';
 
 export const routes: Routes = [
   {
+    path: 'inicio',
+    redirectTo: '#inicio',
+    pathMatch: 'full'
+  },
+  {
+    path: 'nosotros',
+    redirectTo: '#nosotros',
+    pathMatch: 'full'
+  },
+  {
     path: '',
     loadChildren: './home/index#HomeModule'
   },

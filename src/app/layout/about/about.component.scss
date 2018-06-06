@@ -1,21 +1,13 @@
 @import "../../../variables";
 app-about {
-  background: linear-gradient(transparent, #1b6d85 70%);
+  //background: linear-gradient(transparent, #1b6d85 70%);
   display: block;
 }
 .about {
-  //background-color: rgba(255,255,255,.1);
+  background-color: rgba(255, 255, 255,.1);
   position: relative;
-  padding: 50px 75px;
-  margin: 0% 12%;
-  /*  .background {
-      background-color: rgba(255,255,255,.1);
-      display: block;
-      width: 80%;
-      height: 300px;
-      position: absolute;
-      left: 10%;
-    }*/
+  padding: 75px;
+  margin: 25% 12%;
 
   h1 {
 

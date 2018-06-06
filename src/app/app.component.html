@@ -13,23 +13,40 @@
     <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
   </section>
 </div>-->
-<div class="container-fluid">
-  <div class="col-lg-2">
-    <app-nav-side></app-nav-side>
-  </div>
-  <div class="col-lg-10">
-
-    <app-navigation *ngIf="currentUrl && !isCheckoutRoute()"></app-navigation>
-    <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
-    <app-loading-indicator></app-loading-indicator>
-    <app-notification></app-notification>
-    <router-outlet></router-outlet>
-
-    <!-- Bienvenido -->
-    <!--<app-welcome></app-welcome>-->
-
-    <!-- Nosotros -->
-    <app-about></app-about>
-
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2">
+      <app-nav-side></app-nav-side>
+    </div>
   </div>
 </div>
+<div class="container">
+
+  <div class="row section" id="{{listTaxonomi[0].permalink}}">
+    <div class="col-lg-offset-2 col-lg-10">
+
+      <app-navigation *ngIf="currentUrl && !isCheckoutRoute()"></app-navigation>
+      <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
+      <app-loading-indicator></app-loading-indicator>
+      <app-notification></app-notification>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+  <div class="row section">
+    <div class="col-lg-offset-2 col-lg-10">
+      <!-- Bienvenido -->
+      <app-welcome></app-welcome>
+    </div>
+  </div>
+
+  <div class="row section" id="{{listTaxonomi[1].permalink}}">
+    <div class="col-lg-offset-2 col-lg-10">
+      <!-- Nosotros -->
+      <app-about></app-about>
+    </div>
+  </div>
+
+  <!-- Pie -->
+</div>
+<app-footer></app-footer>

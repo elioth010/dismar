@@ -6,6 +6,8 @@ import { CheckoutService } from './core/services/checkout.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
+import { taxonomiList } from './layout/nav-side/shared/taxonomi-list';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,6 +18,8 @@ export class AppComponent implements OnInit, OnDestroy {
   currentUrl: string;
   currentStep: string;
   checkoutUrls = ['/checkout/cart', '/checkout/address', '/checkout/payment'];
+
+  listTaxonomi = taxonomiList;
 
   constructor(
     private router: Router,
@@ -38,6 +42,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder()
           .subscribe();
       });
+    console.log(this.listTaxonomi)
   }
 
   isCheckoutRoute() {
@@ -61,5 +66,4 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.orderSub$.unsubscribe();
   }
-
 }
