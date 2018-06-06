@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {getTaxonomies} from '../../product/reducers/selectors';
 import {AppState} from '../../interfaces';
@@ -21,6 +21,13 @@ export class NavSideComponent implements OnInit {
 
   private isSelected;
 
+  @ViewChild('body') el:ElementRef;
+
+  private vp = {
+    width: window.innerWidth,
+    height: window.innerHeight
+  }
+
   constructor(private store: Store<AppState>,
               private authService: AuthService,
               private authActions: AuthActions,
@@ -30,6 +37,7 @@ export class NavSideComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.el)
   }
 
   selectTaxon(taxon) {
@@ -39,5 +47,9 @@ export class NavSideComponent implements OnInit {
 
   activeIndicator(element) {
     this.isSelected = element.id;
+  }
+
+  navigateTo() {
+
   }
 }
