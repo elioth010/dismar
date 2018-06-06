@@ -31,9 +31,9 @@ $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 body {
   line-height: 1.5;
   color: #ebe0d7;
-  //background-color: #1b6d85;
+  background-color: #1b6d85;
   //background-color: rgba(48, 210, 255, 0.5);
-  background: #001A1E url('assets/' + $background-primary) no-repeat top;
+  //background: #001A1E url('assets/' + $background-primary) no-repeat top;
   background-size: auto;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;

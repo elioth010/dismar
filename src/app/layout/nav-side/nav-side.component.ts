@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {getTaxonomies} from '../../product/reducers/selectors';
 import {AppState} from '../../interfaces';
@@ -15,18 +15,12 @@ import { taxonomiList } from './shared/taxonomi-list';
   templateUrl: './nav-side.component.html',
   styleUrls: ['./nav-side.component.scss']
 })
-export class NavSideComponent implements OnInit {
+export class NavSideComponent implements OnInit{
+  @Output() navigate = new EventEmitter<number>();
   taxonomies$: Observable<any>;
   taxonList = taxonomiList;
 
   private isSelected;
-
-  @ViewChild('body') el:ElementRef;
-
-  private vp = {
-    width: window.innerWidth,
-    height: window.innerHeight
-  }
 
   constructor(private store: Store<AppState>,
               private authService: AuthService,
@@ -37,7 +31,6 @@ export class NavSideComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.el)
   }
 
   selectTaxon(taxon) {
@@ -49,7 +42,7 @@ export class NavSideComponent implements OnInit {
     this.isSelected = element.id;
   }
 
-  navigateTo() {
-
+  navigatePosition(position) {
+    this.navigate.emit(position);
   }
 }

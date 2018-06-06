@@ -6,6 +6,7 @@ export const taxonomiList = [
     'permalink': 'inicio',
     'parent_id': 1,
     'taxonomy_id': 1,
+    'navigateTo': 0,
     'taxons': null
   },
   {
@@ -15,6 +16,7 @@ export const taxonomiList = [
     'permalink': 'nosotros',
     'parent_id': 1,
     'taxonomy_id': 1,
+    'navigateTo': 850,
     'taxons': null
   }, {
     'id': 8,
