@@ -32,6 +32,7 @@ import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/of';
 import { AboutComponent } from './layout/about/about.component';
 import { WelcomeComponent } from './layout/welcome/welcome.component';
+import {FragmentPolyfillModule} from "./fragment-polyfill";
 
 @NgModule({
   declarations: [
@@ -42,6 +43,9 @@ import { WelcomeComponent } from './layout/welcome/welcome.component';
     WelcomeComponent
   ],
   imports: [
+    FragmentPolyfillModule.forRoot({
+      smooth: true
+    }),
     RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, { metaReducers }),
 

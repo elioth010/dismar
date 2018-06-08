@@ -13,7 +13,7 @@
     <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
   </section>
 </div>-->
-<div class="container" id="container" #mainContent>
+<div class="container">
   <div class="row">
     <div class="col-lg-2">
       <app-nav-side (navigate)="navigateTo($event)"></app-nav-side>
@@ -22,7 +22,7 @@
 </div>
 <div class="container">
 
-  <div class="row section" id="{{listTaxonomi[0].permalink}}">
+  <div class="row section">
     <div class="col-lg-offset-2 col-lg-10">
 
       <app-navigation *ngIf="currentUrl && !isCheckoutRoute()"></app-navigation>
@@ -33,14 +33,14 @@
     </div>
   </div>
 
-  <div class="row section">
+  <div class="row section" id="inicio">
     <div class="col-lg-offset-2 col-lg-10">
       <!-- Bienvenido -->
       <app-welcome (navigate)="navigateTo($event)"></app-welcome>
     </div>
   </div>
 
-  <div class="row section">
+  <div class="row section" id="nosotros">
     <div class="col-lg-offset-2 col-lg-10">
       <!-- Nosotros -->
       <app-about></app-about>

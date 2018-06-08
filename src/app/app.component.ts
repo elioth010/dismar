@@ -1,12 +1,12 @@
-import {getAuthStatus} from './auth/reducers/selectors';
-import {AppState} from './interfaces';
-import {Store} from '@ngrx/store';
-import {Subscription} from 'rxjs/Subscription';
-import {CheckoutService} from './core/services/checkout.service';
-import {Component, OnInit, OnDestroy, ElementRef, ViewChild, Input} from '@angular/core';
-import {Router, NavigationEnd} from '@angular/router';
+import { getAuthStatus } from './auth/reducers/selectors';
+import { AppState } from './interfaces';
+import { Store } from '@ngrx/store';
+import { Subscription } from 'rxjs/Subscription';
+import { CheckoutService } from './core/services/checkout.service';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
-import {taxonomiList} from './layout/nav-side/shared/taxonomi-list';
+import { taxonomiList } from './layout/nav-side/shared/taxonomi-list';
 
 @Component({
   selector: 'app-root',
@@ -14,8 +14,6 @@ import {taxonomiList} from './layout/nav-side/shared/taxonomi-list';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  @ViewChild('mainContent') mainContent: ElementRef;
-
   orderSub$: Subscription;
   currentUrl: string;
   currentStep: string;
@@ -23,16 +21,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   listTaxonomi = taxonomiList;
 
-  countPosition = 0;
-
-  private vp = {
-    width: window.innerWidth,
-    height: window.innerHeight
-  }
-
-  constructor(private router: Router,
-              private checkoutService: CheckoutService,
-              private store: Store<AppState>) {
+  constructor(
+    private router: Router,
+    private checkoutService: CheckoutService,
+    private store: Store<AppState>
+    ) {
     router
       .events
       .filter(e => e instanceof NavigationEnd)
@@ -44,11 +37,12 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.store.select(getAuthStatus).subscribe(() => {
-      this.orderSub$ = this.checkoutService.fetchCurrentOrder()
-        .subscribe();
-    });
-    console.log(this.mainContent.nativeElement)
+    this.store.select(getAuthStatus).
+      subscribe(() => {
+        this.orderSub$ = this.checkoutService.fetchCurrentOrder()
+          .subscribe();
+      });
+    console.log(this.listTaxonomi)
   }
 
   isCheckoutRoute() {
@@ -71,24 +65,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.orderSub$.unsubscribe();
-  }
-
-  navigateTo(position) {
-    if (position === 0) {
-      for (let i = position; i >= 0; i--) {
-        setTimeout(() => {
-          window.scrollTo(0, this.countPosition);
-          this.countPosition += position[i];
-        }, this.countPosition)
-      }
-    } else {
-      for (let i = 0; i < position; i++) {
-        setTimeout(() => {
-          window.scrollTo(0, this.countPosition);
-          this.countPosition++;
-        }, this.countPosition)
-      }
-    }
-    console.log(this.countPosition)
   }
 }
