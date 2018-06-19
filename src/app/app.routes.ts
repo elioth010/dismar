@@ -1,14 +1,20 @@
 import { RouterModule, Routes } from '@angular/router';
 import { CanActivateViaAuthGuard } from './core/guards/auth.guard';
-import {WelcomeComponent} from "./layout/welcome/welcome.component";
 import {promise} from "selenium-webdriver";
 import fulfilled = promise.fulfilled;
+
+import {WelcomeComponent} from "./layout/welcome/welcome.component";
+import {AboutComponent} from './layout/about/about.component';
 
 
 export const routes: Routes = [
   {
-    path: 'welcome',
+    path: 'inicio',
     component: WelcomeComponent
+  },
+  {
+    path: "nosotros",
+    component: AboutComponent
   },
   {
     path: 'checkout',
@@ -28,7 +34,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'welcome',
+    redirectTo: 'inicio',
     pathMatch: 'full'
   }
 ];
