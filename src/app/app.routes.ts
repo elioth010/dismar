@@ -1,11 +1,14 @@
 import { RouterModule, Routes } from '@angular/router';
 import { CanActivateViaAuthGuard } from './core/guards/auth.guard';
+import {WelcomeComponent} from "./layout/welcome/welcome.component";
+import {promise} from "selenium-webdriver";
+import fulfilled = promise.fulfilled;
 
 
 export const routes: Routes = [
   {
-    path: '',
-    loadChildren: './home/index#HomeModule'
+    path: 'welcome',
+    component: WelcomeComponent
   },
   {
     path: 'checkout',
@@ -22,5 +25,10 @@ export const routes: Routes = [
   {
     path: 'auth',
     loadChildren: './auth/auth.module#AuthModule'
+  },
+  {
+    path: '',
+    redirectTo: 'welcome',
+    pathMatch: 'full'
   }
 ];
