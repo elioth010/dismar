@@ -33,16 +33,18 @@ export class NavSideComponent implements OnInit{
   ngOnInit() {
   }
 
+/*
   selectTaxon(taxon) {
     this.router.navigateByUrl('/');
     this.store.dispatch(this.searchActions.addFilter(taxon));
   }
+*/
 
   activeIndicator(element) {
     this.isSelected = element.id;
   }
 
-  navigatePosition(position) {
-    this.navigate.emit(position);
+  navigatePosition(scroll) {
+    this.navigate.emit(scroll);
   }
 }

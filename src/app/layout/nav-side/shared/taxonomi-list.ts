@@ -16,7 +16,7 @@ export const taxonomiList = [
     'permalink': 'nosotros',
     'parent_id': 1,
     'taxonomy_id': 1,
-    'navigateTo': 850,
+    'navigateTo': -350,
     'taxons': null
   }, {
     'id': 8,
@@ -24,13 +24,15 @@ export const taxonomiList = [
     'pretty_name': 'Contact',
     'permalink': 'productos',
     'taxonomy_id': 1,
+    'navigateTo': -700,
     'taxons': null
   }, {
     'id': 10,
     'name': 'Contacto',
-    'pretty_name': 'Contact',
-    'permalink': 'contact',
+    'pretty_name': 'Contacto',
+    'permalink': 'contacto',
     'taxonomy_id': 1,
+    'navigateTo': -1050,
     'taxons': null
   }
 ];

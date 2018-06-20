@@ -20,6 +20,7 @@ export class AppComponent implements OnInit, OnDestroy {
   checkoutUrls = ['/checkout/cart', '/checkout/address', '/checkout/payment'];
 
   listTaxonomi = taxonomiList;
+  public scroll;
 
   constructor(
     private router: Router,
@@ -65,5 +66,10 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.orderSub$.unsubscribe();
+  }
+
+  public scrollNavigate(scroll) {
+    this.scroll = scroll.navigateTo;
+    console.log(this.scroll)
   }
 }

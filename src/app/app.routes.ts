@@ -5,16 +5,31 @@ import fulfilled = promise.fulfilled;
 
 import {WelcomeComponent} from "./layout/welcome/welcome.component";
 import {AboutComponent} from './layout/about/about.component';
+import {ProductComponent} from "./product/product.component";
+import {ContactComponent} from "./layout/contact/contact.component";
 
 
 export const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'inicio',
+    pathMatch: 'full'
+  },
   {
     path: 'inicio',
     component: WelcomeComponent
   },
   {
+    path: 'productos',
+    component: ProductComponent
+  },
+  {
     path: "nosotros",
     component: AboutComponent
+  },
+  {
+    path: 'contacto',
+    component: ContactComponent
   },
   {
     path: 'checkout',
@@ -32,9 +47,4 @@ export const routes: Routes = [
     path: 'auth',
     loadChildren: './auth/auth.module#AuthModule'
   },
-  {
-    path: '',
-    redirectTo: 'inicio',
-    pathMatch: 'full'
-  }
 ];

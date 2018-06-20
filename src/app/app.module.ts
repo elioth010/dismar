@@ -33,6 +33,8 @@ import 'rxjs/add/observable/of';
 import { AboutComponent } from './layout/about/about.component';
 import { WelcomeComponent } from './layout/welcome/welcome.component';
 import {FragmentPolyfillModule} from "./fragment-polyfill";
+import { ContactComponent } from './layout/contact/contact.component';
+import {ProductComponent} from "./product/product.component";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import {FragmentPolyfillModule} from "./fragment-polyfill";
     CheckoutHeaderComponent,
     CheckoutFooterComponent,
     AboutComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    ProductComponent,
+    ContactComponent
   ],
   imports: [
     FragmentPolyfillModule.forRoot({

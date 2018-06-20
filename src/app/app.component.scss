@@ -1,1 +1,12 @@
 @import "../variables";
+
+.app-body {
+  height: map_get($app-properties, height);
+  width: map_get($app-properties, width);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: #001A1E url('assets/' + $background-primary) no-repeat;
+  background-size: 100%;
+}

@@ -11,4 +11,11 @@ $secondary-font: 'Montserrat-Bold', sans-serif;
 $logo: 'logo.png';
 $background-primary: 'bg_mod.png';
 
-$g-height: 85vh;
+/*Generic*/
+
+$app-properties: (
+  height: 100vh,
+  width: 100%,
+);
+
+$component-height: 85vh;
