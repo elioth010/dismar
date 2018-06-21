@@ -36,6 +36,9 @@ import {FragmentPolyfillModule} from "./fragment-polyfill";
 import { ContactComponent } from './layout/contact/contact.component';
 import {ProductComponent} from "./product/product.component";
 
+// Services
+import { NavigationServiceService } from './shared/services/navigation-service.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +85,7 @@ import {ProductComponent} from "./product/product.component";
     CoreModule,
     SharedModule,
   ],
-  providers: [],
+  providers: [NavigationServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

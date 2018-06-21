@@ -1,6 +1,6 @@
 export const taxonomiList = [
   {
-    'id': 4,
+    'id': 1,
     'name': 'Inicio',
     'pretty_name': 'Categories -> Product',
     'permalink': 'inicio',
@@ -10,7 +10,7 @@ export const taxonomiList = [
     'taxons': null
   },
   {
-    'id': 3,
+    'id': 2,
     'name': 'Nosotros',
     'pretty_name': 'Categories -> Brand',
     'permalink': 'nosotros',
@@ -19,7 +19,7 @@ export const taxonomiList = [
     'navigateTo': -350,
     'taxons': null
   }, {
-    'id': 8,
+    'id': 3,
     'name': 'productos',
     'pretty_name': 'Contact',
     'permalink': 'productos',
@@ -27,7 +27,7 @@ export const taxonomiList = [
     'navigateTo': -700,
     'taxons': null
   }, {
-    'id': 10,
+    'id': 4,
     'name': 'Contacto',
     'pretty_name': 'Contacto',
     'permalink': 'contacto',

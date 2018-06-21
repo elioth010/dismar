@@ -70,6 +70,5 @@ export class AppComponent implements OnInit, OnDestroy {
 
   public scrollNavigate(scroll) {
     this.scroll = scroll.navigateTo;
-    console.log(this.scroll)
   }
 }
