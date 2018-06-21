@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   subscription;
   nameClass;
+  idComponent = 2;
 
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));
@@ -24,13 +25,7 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   changeClass(taxon) {
-    if (taxon < 4) {
-      this.nameClass = 'fadeInBottom';
-      console.log(this.nameClass);
-    } else if (taxon > 1) {
-      this.nameClass = 'fadeInTop';
-      console.log(this.nameClass)
-    }
+    console.log(this.idComponent)
     console.log(taxon)
   }
 

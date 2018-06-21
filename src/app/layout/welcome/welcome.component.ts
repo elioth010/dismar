@@ -11,8 +11,8 @@ export class WelcomeComponent implements OnInit, OnDestroy {
   @Output() navigate = new EventEmitter<number>();
 
   subscription;
-  nameClass;
-  taxonInit;
+  nameClass = 'fadeIn';
+  idComponent = 1;
 
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));
@@ -26,18 +26,10 @@ export class WelcomeComponent implements OnInit, OnDestroy {
   }
 
   changeClass(taxon) {
-    this.taxonInit = taxon - 1;
-
-    console.log(this.taxonInit);
-    if (taxon < 4) {
-      this.nameClass = 'fadeInBottom';
-      console.log(this.nameClass)
-    } else if (taxon > 1) {
-      this.nameClass = 'fadeInTop';
-      console.log(this.nameClass)
-    }
+    console.log(this.idComponent)
     console.log(taxon)
   }
+
 
   navigatePosition(position) {
     this.navigate.emit(position);
