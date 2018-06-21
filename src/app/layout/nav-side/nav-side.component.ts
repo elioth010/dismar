@@ -9,6 +9,7 @@ import {AuthService} from '../../core/services/auth.service';
 import {SearchActions} from '../../home/reducers/search.actions';
 
 import { taxonomiList } from './shared/taxonomi-list';
+import {NavigationServiceService} from "../../shared/services/navigation-service.service";
 
 @Component({
   selector: 'app-nav-side',
@@ -26,7 +27,8 @@ export class NavSideComponent implements OnInit{
               private authService: AuthService,
               private authActions: AuthActions,
               private searchActions: SearchActions,
-              private router: Router) {
+              private router: Router,
+              private navigationService: NavigationServiceService) {
     this.taxonomies$ = this.store.select(getTaxonomies);
   }
 
@@ -42,6 +44,7 @@ export class NavSideComponent implements OnInit{
 
   activeIndicator(element) {
     this.isSelected = element.id;
+    this.navigationService.notify.next(this.isSelected);
   }
 
   navigatePosition(scroll) {
