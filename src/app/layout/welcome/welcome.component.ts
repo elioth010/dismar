@@ -26,8 +26,6 @@ export class WelcomeComponent implements OnInit, OnDestroy {
   }
 
   changeClass(taxon) {
-    console.log(this.idComponent)
-    console.log(taxon)
   }
 
 

@@ -22,6 +22,10 @@ export class NavSideComponent implements OnInit{
   taxonList = taxonomiList;
 
   private isSelected;
+  private navState = {
+    navOld: 0,
+    navCurrent: 0
+  }
 
   constructor(private store: Store<AppState>,
               private authService: AuthService,
@@ -44,7 +48,19 @@ export class NavSideComponent implements OnInit{
 
   activeIndicator(element) {
     this.isSelected = element.id;
-    this.navigationService.notify.next(this.isSelected);
+
+    element.taxons = [this.navState];
+
+    if (this.navState.navOld === 0 && this.navState.navCurrent === 0) {
+      this.navState.navCurrent = element.id;
+    }
+
+    if (this.navState.navCurrent !== 0) {
+      this.navState.navOld = this.navState.navCurrent;
+      this.navState.navCurrent = element.id;
+    }
+
+    this.navigationService.notify.next(element);
   }
 
   navigatePosition(scroll) {

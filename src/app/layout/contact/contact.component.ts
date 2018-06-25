@@ -25,8 +25,13 @@ export class ContactComponent implements OnInit, OnDestroy {
   }
 
   changeClass(taxon) {
-    console.log(this.idComponent)
-    console.log(taxon)
+    taxon.taxons.forEach(item => {
+      if (item.navOld > item.navCurrent) {
+        this.nameClass = 'fadeInBottom';
+      } else if (item.navOld < item.navCurrent) {
+        this.nameClass = 'fadeInTop';
+      }
+    });
   }
 
 }
