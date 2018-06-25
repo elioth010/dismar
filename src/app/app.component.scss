@@ -10,3 +10,13 @@
   background: #001A1E url('assets/' + $background-primary) no-repeat;
   background-size: 100%;
 }
+
+// Efecto de deslizamiento para el background.
+
+.slide {
+  -webkit-transition: background-position .9s ease-in-out;
+  -moz-transition: background-position .9s ease-in-out;
+  -ms-transition: background-position .9s ease-in-out;
+  -o-transition: background-position .9s ease-in-out;
+  transition: background-position .9s ease-in-out;
+}

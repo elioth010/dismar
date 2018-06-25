@@ -38,6 +38,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    console.log(this.listTaxonomi)
+
     this.store.select(getAuthStatus).
       subscribe(() => {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder()

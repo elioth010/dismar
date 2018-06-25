@@ -28,9 +28,9 @@ export class ProductComponent implements OnInit, OnDestroy {
   changeClass(taxon) {
     taxon.taxons.forEach(item => {
       if (item.navOld > item.navCurrent) {
-        this.nameClass = 'fadeInBottom';
-      } else if (item.navOld < item.navCurrent) {
         this.nameClass = 'fadeInTop';
+      } else if (item.navOld < item.navCurrent) {
+        this.nameClass = 'fadeInBottom';
       }
     });
   }

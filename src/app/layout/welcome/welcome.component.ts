@@ -13,7 +13,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
   subscription;
   nameClass = 'fadeIn';
   idComponent = 1;
-
+nn
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));
   }
@@ -26,10 +26,17 @@ export class WelcomeComponent implements OnInit, OnDestroy {
   }
 
   changeClass(taxon) {
+    taxon.taxons.forEach(item => {
+      if (item.navOld > item.navCurrent) {
+        this.nameClass = 'fadeInTop';
+      } else if (item.navOld < item.navCurrent) {
+        this.nameClass = 'fadeInBottom';
+      }
+    });
   }
-
 
   navigatePosition(position) {
     this.navigate.emit(position);
   }
+
 }
