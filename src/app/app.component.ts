@@ -45,7 +45,6 @@ export class AppComponent implements OnInit, OnDestroy {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder()
           .subscribe();
       });
-    console.log(this.listTaxonomi)
   }
 
   isCheckoutRoute() {
