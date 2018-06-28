@@ -1,4 +1,10 @@
-footer {
+app-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   text-align: center;
-  color: #101010;
+
+  label {
+    font-size: 1.5rem;
+  }
 }

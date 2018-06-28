@@ -21,10 +21,10 @@ export class NavSideComponent implements OnInit{
   taxonomies$: Observable<any>;
   taxonList = taxonomiList;
 
-  private isSelected;
+  private isSelected = 1;
   private navState = {
     navOld: 0,
-    navCurrent: 0
+    navCurrent: 1
   }
 
   constructor(private store: Store<AppState>,
@@ -61,6 +61,7 @@ export class NavSideComponent implements OnInit{
     }
 
     this.navigationService.notify.next(element);
+    console.log(this.navState)
   }
 
   navigatePosition(scroll) {
