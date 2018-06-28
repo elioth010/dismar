@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnDestroy, OnInit, Output, ViewEncapsulation} from '@angular/core';
-import {NavigationServiceService} from "../../shared/services/navigation-service.service";
+import {NavigationServiceService} from '../../shared/services/navigation-service.service';
 
 @Component({
   selector: 'app-welcome',
@@ -13,7 +13,8 @@ export class WelcomeComponent implements OnInit, OnDestroy {
   subscription;
   nameClass = 'fadeIn';
   idComponent = 1;
-nn
+  nn
+
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));
   }
@@ -26,13 +27,15 @@ nn
   }
 
   changeClass(taxon) {
-    taxon.taxons.forEach(item => {
-      if (item.navOld > item.navCurrent) {
-        this.nameClass = 'fadeInTop';
-      } else if (item.navOld < item.navCurrent) {
-        this.nameClass = 'fadeInBottom';
-      }
-    });
+    if (taxon) {
+      taxon.taxons.forEach(item => {
+        if (item.navOld > item.navCurrent) {
+          this.nameClass = 'fadeInTop';
+        } else if (item.navOld < item.navCurrent) {
+          this.nameClass = 'fadeInBottom';
+        }
+      });
+    }
   }
 
   navigatePosition(position) {

@@ -25,13 +25,15 @@ export class AboutComponent implements OnInit, OnDestroy {
   }
 
   changeClass(taxon) {
-    taxon.taxons.forEach(item => {
-      if (item.navOld > item.navCurrent) {
-        this.nameClass = 'fadeInTop';
-      } else if (item.navOld < item.navCurrent) {
-        this.nameClass = 'fadeInBottom';
-      }
-    });
+    if (taxon) {
+      taxon.taxons.forEach(item => {
+        if (item.navOld > item.navCurrent) {
+          this.nameClass = 'fadeInTop';
+        } else if (item.navOld < item.navCurrent) {
+          this.nameClass = 'fadeInBottom';
+        }
+      });
+    }
   }
 
 }
