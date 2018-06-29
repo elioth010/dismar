@@ -10,7 +10,6 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   subscription;
   nameClass;
-  idComponent = 4;
 
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));

@@ -11,7 +11,6 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   subscription;
   nameClass;
-  idComponent = 2;
 
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));

@@ -7,34 +7,36 @@ app-about {
 .about {
   background-color: rgba(255, 255, 255,.1);
   position: relative;
+  padding: 40px;
+  border-radius: 6px;
 
   h1 {
-    margin: 0 0 50px 30px;
+    margin: 0 0 50px 0;
     font-size: 7rem;
     font-weight: bold;
   }
 
   h2 {
     font-size: 3.5rem;
-    margin: 30px 0 0 30px;
+    margin: 30px 0 0 0;
   }
 
   p {
-    margin: 0 0 0 20px;
     font-size: 2.5rem;
   }
 
   label {
-    margin: 30px 0 0 20px;
+    margin: 30px 0 0 0;
     font-size: 2rem;
   }
 
   .about-img {
-    //background: transparent url("../../../assets/about.jpg") no-repeat center center;
+    background: transparent url("../../../assets/about.jpg") no-repeat center center;
     width: 300px;
     height: 300px;
     display: block;
     border-radius: 100%;
     border: 10px solid #fff;
+    margin: 70px 0 0 0;
   }
 }

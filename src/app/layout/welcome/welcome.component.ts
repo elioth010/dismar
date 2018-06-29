@@ -12,8 +12,6 @@ export class WelcomeComponent implements OnInit, OnDestroy {
 
   subscription;
   nameClass = 'fadeIn';
-  idComponent = 1;
-  nn
 
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));

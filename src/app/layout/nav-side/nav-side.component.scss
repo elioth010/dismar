@@ -1,12 +1,11 @@
 @import "../../../variables";
 
 .logo {
-  //background: transparent url("../../../assets/" + $logo) no-repeat center left;
+  background: transparent url("../../../assets/" + $logo) no-repeat center left;
   background-size: contain;
   height: 75px;
   display: block;
-  margin-left: 15px;
-  margin-bottom: 50px;
+  margin: 25px 0 25px 15px;
 }
 
 .nav {
