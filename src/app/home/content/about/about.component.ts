@@ -1,17 +1,16 @@
-import {Component, EventEmitter, OnDestroy, OnInit, Output, ViewEncapsulation} from '@angular/core';
-import {NavigationServiceService} from '../../shared/services/navigation-service.service';
+import {Component, OnDestroy, OnInit, ViewEncapsulation} from '@angular/core';
+import {NavigationServiceService} from "../../../shared/services/navigation-service.service";
 
 @Component({
-  selector: 'app-welcome',
-  templateUrl: './welcome.component.html',
-  styleUrls: ['./welcome.component.scss'],
+  selector: 'app-about',
+  templateUrl: './about.component.html',
+  styleUrls: ['./about.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class WelcomeComponent implements OnInit, OnDestroy {
-  @Output() navigate = new EventEmitter<number>();
+export class AboutComponent implements OnInit, OnDestroy {
 
   subscription;
-  nameClass = 'fadeIn';
+  nameClass;
 
   constructor(private navigationService: NavigationServiceService) {
     this.subscription = navigationService.notify.subscribe(value => this.changeClass(value));
@@ -34,10 +33,6 @@ export class WelcomeComponent implements OnInit, OnDestroy {
         }
       });
     }
-  }
-
-  navigatePosition(position) {
-    this.navigate.emit(position);
   }
 
 }

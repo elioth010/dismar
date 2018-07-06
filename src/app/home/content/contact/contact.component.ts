@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {NavigationServiceService} from '../../shared/services/navigation-service.service';
+import {NavigationServiceService} from '../../../shared/services/navigation-service.service';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Title} from "@angular/platform-browser";
 

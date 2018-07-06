@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
 
-  background: #001A1E url('assets/' + $background-primary) no-repeat;
+  background: #001A1E url('assets/#{$background-primary}') no-repeat;
   background-size: 100%;
 }
 

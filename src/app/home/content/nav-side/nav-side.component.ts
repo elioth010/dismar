@@ -1,15 +1,15 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
-import {getTaxonomies} from '../../product/reducers/selectors';
-import {AppState} from '../../interfaces';
+import {getTaxonomies} from '../../../product/reducers/selectors';
+import {AppState} from '../../../interfaces';
 import {Store} from '@ngrx/store';
 import {Router} from '@angular/router';
-import {AuthActions} from '../../auth/actions/auth.actions';
-import {AuthService} from '../../core/services/auth.service';
-import {SearchActions} from '../../home/reducers/search.actions';
+import {AuthActions} from '../../../auth/actions/auth.actions';
+import {AuthService} from '../../../core/services/auth.service';
+import {SearchActions} from '../../reducers/search.actions';
 
 import { taxonomiList } from './shared/taxonomi-list';
-import {NavigationServiceService} from "../../shared/services/navigation-service.service";
+import {NavigationServiceService} from "../../../shared/services/navigation-service.service";
 
 @Component({
   selector: 'app-nav-side',

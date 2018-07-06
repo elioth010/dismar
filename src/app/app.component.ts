@@ -6,7 +6,7 @@ import { CheckoutService } from './core/services/checkout.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
-import { taxonomiList } from './layout/nav-side/shared/taxonomi-list';
+import { taxonomiList } from './home/content/nav-side/shared/taxonomi-list';
 
 @Component({
   selector: 'app-root',

@@ -30,14 +30,15 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/of';
-import { AboutComponent } from './layout/about/about.component';
-import { WelcomeComponent } from './layout/welcome/welcome.component';
+import { AboutComponent } from './home/content/about/about.component';
+import { WelcomeComponent } from './home/content/welcome/welcome.component';
 import {FragmentPolyfillModule} from "./fragment-polyfill";
-import { ContactComponent } from './layout/contact/contact.component';
+import { ContactComponent } from './home/content/contact/contact.component';
 import {ProductComponent} from "./product/product.component";
 
 // Services
 import { NavigationServiceService } from './shared/services/navigation-service.service';
+import { ProductsComponent } from './home/content/products/products.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { NavigationServiceService } from './shared/services/navigation-service.s
     AboutComponent,
     WelcomeComponent,
     ProductComponent,
-    ContactComponent
+    ContactComponent,
+    ProductsComponent
   ],
   imports: [
     FragmentPolyfillModule.forRoot({

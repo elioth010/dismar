@@ -8,7 +8,7 @@ import { ProfileDropdownComponent } from './navigation/profile-dropdown/profile-
 // Modules
 import { SharedModule } from '../shared/index';
 import { RouterModule } from '@angular/router';
-import {NavSideComponent} from './nav-side/nav-side.component';
+import {NavSideComponent} from '../home/content/nav-side/nav-side.component';
 
 @NgModule({
   declarations: [

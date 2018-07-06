@@ -3,10 +3,10 @@ import { CanActivateViaAuthGuard } from './core/guards/auth.guard';
 import {promise} from "selenium-webdriver";
 import fulfilled = promise.fulfilled;
 
-import {WelcomeComponent} from "./layout/welcome/welcome.component";
-import {AboutComponent} from './layout/about/about.component';
-import {ProductComponent} from "./product/product.component";
-import {ContactComponent} from "./layout/contact/contact.component";
+import {WelcomeComponent} from "./home/content/welcome/welcome.component";
+import {AboutComponent} from './home/content/about/about.component';
+import {ContactComponent} from "./home/content/contact/contact.component";
+import {ProductsComponent} from "./home/content/products/products.component";
 
 
 export const routes: Routes = [
@@ -21,7 +21,7 @@ export const routes: Routes = [
   },
   {
     path: 'productos',
-    component: ProductComponent
+    component: ProductsComponent
   },
   {
     path: "nosotros",
