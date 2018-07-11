@@ -4,6 +4,8 @@ $product-h: 250;
 
 .product {
   height: auto;
+  margin-bottom: 16px;
+
   .product-content {
     position: relative;
     min-height: #{$product-h}px;
@@ -11,23 +13,18 @@ $product-h: 250;
     background-position: center !important;
     border-radius: 6px;
 
-    .product-header,
     .product-footer {
-      height: #{($product-h / 2) - 15}px;
-    }
-
-    .product-header {
-      background: linear-gradient(to top, transparent, $primary-color-alternative);
-      border-radius: 6px 6px 0 0;
+      background: linear-gradient(to bottom, transparent 25%, $primary-color-alternative);
+      border-radius: 0 0 6px 6px;
+      width: 100%;
+      height: #{$product-h / 3}px;
+      position: absolute;
+      bottom: 0;
 
       h1 {
         padding: 15px;
+        width: 100%;
       }
-    }
-
-    .product-footer {
-      background: linear-gradient(to bottom, transparent, $primary-color-alternative);
-      border-radius: 0 0 6px 6px;
     }
   }
 }
