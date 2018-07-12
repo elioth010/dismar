@@ -21,7 +21,6 @@ $product-h: 250;
       position: relative;
       border-radius: 6px;
       justify-content: center;
-      align-items: flex-end;
 
       .product-footer {
         background-color: #fff;
@@ -29,9 +28,10 @@ $product-h: 250;
         border-radius: 0 0 6px 6px;
         width: 100%;
         //height: #{$product-h / 3}px;
-        position: relative;
-        bottom: 0;
+        position: absolute;
+        bottom: 0%;
         text-align: center;
+        @include transitionElement(bottom, 150ms, ease-in-out, 0s);
 
         h1{
           font-size: 1.2rem;
@@ -62,10 +62,11 @@ $product-h: 250;
     .product-content {
       .product-inner-content {
         background-color: #{$primary-color}e0;
-        align-items: center;
 
         .product-footer {
           background-color: transparent;
+          bottom: calc((100% - 90px) / 2);
+          @include transitionElement(bottom, 500ms, ease-in-out, 0s);
 
           h1 {
             &.product-title {
@@ -87,6 +88,8 @@ $product-h: 250;
             font-size: 1.4rem;
             margin: 0 auto;
             padding: 5px 16px;
+
+            @include shadowElement($primary-color-alternative)
           }
         }
       }

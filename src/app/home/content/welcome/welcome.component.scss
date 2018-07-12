@@ -33,7 +33,7 @@
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    box-shadow: 0 2px 12px 0 #{$primary-color}80;
+    @include shadowElement($primary-color);
     margin-top: 20px;
 
     &:hover,
