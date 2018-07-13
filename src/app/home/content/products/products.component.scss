@@ -21,6 +21,7 @@ $product-h: 250;
       position: relative;
       border-radius: 6px;
       justify-content: center;
+      @include transitionElement(background, 250ms, ease-in-out, 0s);
 
       .product-footer {
         background-color: #fff;
@@ -29,9 +30,10 @@ $product-h: 250;
         width: 100%;
         //height: #{$product-h / 3}px;
         position: absolute;
-        bottom: 0%;
+        bottom: 0px;
         text-align: center;
-        @include transitionElement(bottom, 150ms, ease-in-out, 0s);
+        @include transitionElement(bottom, 500ms, ease-in-out, 0s);
+        @include transitionElement(background, 250ms, ease-in-out, 0s);
 
         h1{
           font-size: 1.2rem;
@@ -62,6 +64,7 @@ $product-h: 250;
     .product-content {
       .product-inner-content {
         background-color: #{$primary-color}e0;
+        @include transitionElement(background, 250ms, ease-in-out, 0s);
 
         .product-footer {
           background-color: transparent;
@@ -87,7 +90,7 @@ $product-h: 250;
             border: none;
             font-size: 1.4rem;
             margin: 0 auto;
-            padding: 5px 16px;
+            padding: 6px 16px;
 
             @include shadowElement($primary-color-alternative)
           }
