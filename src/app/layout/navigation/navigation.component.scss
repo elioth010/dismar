@@ -8,7 +8,20 @@
     }
   }
   .search-bar {
-    input, a {
+    margin: 10px 0px;
+
+    input {
+      padding: 6px 6px 6px 10px;
+    }
+
+    a {
+      padding: 2px;
+
+      span {
+        padding: 2px;
+      }
+    }
+/*    input, a {
       background-color: transparent;
       border: none;
 
@@ -47,7 +60,7 @@
           margin-left: 0px;
         }
       }
-    }
+    }*/
 
   }
 }

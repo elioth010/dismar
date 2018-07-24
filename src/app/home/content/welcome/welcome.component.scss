@@ -28,13 +28,15 @@
   button {
     font-family: $primary-font;
     font-weight: 600;
+    font-size: 1.5rem;
     background-color: $primary-color;
-    padding: 5px 30px;
+    padding: 7px 40px;
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
-    @include shadowElement($primary-color);
     margin-top: 20px;
+
+    @include shadowElement($primary-color);
 
     &:hover,
     &:active {

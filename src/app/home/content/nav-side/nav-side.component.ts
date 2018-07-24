@@ -61,7 +61,6 @@ export class NavSideComponent implements OnInit{
     }
 
     this.navigationService.notify.next(element);
-    console.log(this.navState)
   }
 
   navigatePosition(scroll) {

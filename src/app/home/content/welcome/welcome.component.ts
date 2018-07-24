@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnDestroy, OnInit, Output, ViewEncapsulation} from '@angular/core';
 import {NavigationServiceService} from '../../../shared/services/navigation-service.service';
+import {Observable} from 'rxjs/Observable';
 
 @Component({
   selector: 'app-welcome',

@@ -1,5 +1,7 @@
 <div class="app-body slide" [ngStyle]="{'background-position-y' : scroll + 'px'}">
 
+  <div class="back-drop-slide vivify" [ngClass]="{'fadeIn' : scroll === -350, 'fadeOut' : scroll !== -350}"></div>
+
   <div class="container">
     <div class="row">
       <div class="col-lg-2">

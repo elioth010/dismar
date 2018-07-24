@@ -11,25 +11,37 @@
 .nav {
   position: fixed;
 
-  a {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 1.8rem;
-
-    &:hover,
-    &:focus {
+  li {
+    a {
       background-color: transparent;
-      font-weight: 600;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        font-weight: 600;
+      }
+
+      span {
+        &.indicator {
+          width: 30px;
+          height: 4px;
+          display: block;
+          background-color: transparent;
+        }
+      }
     }
 
-    .indicator {
-      width: 30px;
-      height: 4px;
-      background-color: #fff;
-      display: none;
-
-      &.active {
-        display: block;
+    &.active {
+      a {
+        span {
+          &.indicator {
+            background-color: $alternative-color;
+            display: block;
+          }
+        }
       }
     }
   }

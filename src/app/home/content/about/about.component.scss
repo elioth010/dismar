@@ -5,28 +5,30 @@ app-about {
   min-height: $component-height;
 }
 .about {
-  background-color: rgba(255, 255, 255,.1);
   position: relative;
-  padding: 40px;
+  padding: 20px 40px;
   border-radius: 6px;
+  margin-left: 4em;
+  margin-right: 3em;
 
   h1 {
-    margin: 0 0 50px 0;
+    margin: 0 0 30px 0;
     font-size: 7rem;
     font-weight: bold;
   }
 
   h2 {
     font-size: 3.5rem;
-    margin: 30px 0 0 0;
+    margin: 15px 0 0 0;
   }
 
   p {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: justify;
   }
 
   label {
-    margin: 30px 0 0 0;
+    margin: 50px 0 0 0;
     font-size: 2rem;
   }
 

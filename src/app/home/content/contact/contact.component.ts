@@ -35,15 +35,15 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.contactForm = this.fb.group({
       name: ['', Validators.compose([Validators.required])],
       email: ['', Validators.compose([Validators.required, Validators.email])],
-      subject: ['', Validators.compose([Validators.required])],
       message: ['', Validators.compose([Validators.required])],
-      phone: ['', Validators.compose([Validators.maxLength(8)])]
+      phone: ['', Validators.compose([
+        Validators.maxLength(8), Validators.maxLength(9)
+      ])]
     });
   }
 
   onSubmit() {
     const name = this.contactForm.get('name').value;
-    console.log(name)
   }
 
   changeClass(taxon) {
