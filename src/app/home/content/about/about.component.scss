@@ -3,6 +3,7 @@ app-about {
   //background: linear-gradient(transparent, #1b6d85 70%);
   display: block;
   min-height: $component-height;
+  margin-top: map_get($app-properties, m-top);
 }
 .about {
   position: relative;

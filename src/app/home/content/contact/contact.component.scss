@@ -3,6 +3,7 @@
 .row {
   &:first-child {
     padding-top: 15px;
+    margin-top: map_get($app-properties, m-top);
 
     h1 {
       font-size: 7rem;
@@ -11,34 +12,34 @@
       margin-bottom: 30px;
       font-weight: 800;
     }
-  }
-}
 
-address, span {
-  font-size: 1.3rem;
-}
+    address, span {
+      font-size: 1.3rem;
+    }
 
-address {
-  span {
-    text-align: justify;
-  }
-}
+    address {
+      span {
+        text-align: justify;
+      }
+    }
 
-form {
-  label {
-    font-size: 1.5rem;
-  }
+    form {
+      label {
+        font-size: 1.5rem;
+      }
 
-  button {
-    border-radius: 100px;
-    font-weight: bold;
+      button {
+        border-radius: 100px;
+        font-weight: bold;
 
-    &.btn-send {
-      background-color: $primary-color-alternative;
-      border-color: $primary-color;
+        &.btn-send {
+          background-color: $primary-color-alternative;
+          border-color: $primary-color;
 
-      &:hover {
-        background-color: $primary-color;
+          &:hover {
+            background-color: $primary-color;
+          }
+        }
       }
     }
   }
