@@ -6,6 +6,8 @@ import { CheckoutService } from './core/services/checkout.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
+import { taxonomiList } from './home/content/nav-side/shared/taxonomi-list';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -16,6 +18,9 @@ export class AppComponent implements OnInit, OnDestroy {
   currentUrl: string;
   currentStep: string;
   checkoutUrls = ['/checkout/cart', '/checkout/address', '/checkout/payment'];
+
+  listTaxonomi = taxonomiList;
+  public scroll;
 
   constructor(
     private router: Router,
@@ -33,6 +38,8 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+    console.log(this.listTaxonomi)
+
     this.store.select(getAuthStatus).
       subscribe(() => {
         this.orderSub$ = this.checkoutService.fetchCurrentOrder()
@@ -62,4 +69,7 @@ export class AppComponent implements OnInit, OnDestroy {
     this.orderSub$.unsubscribe();
   }
 
+  public scrollNavigate(scroll) {
+    this.scroll = scroll.navigateTo;
+  }
 }

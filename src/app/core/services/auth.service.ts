@@ -102,6 +102,7 @@ export class AuthService {
   authorized(): Observable<any> {
     return this.http
       .get('spree/api/v1/users')
+      .catch(() => Promise.resolve())
       .map((res: Response) => res.json());
     // catch should be handled here with the http observable
     // so that only the inner obs dies and not the effect Observable

@@ -1,15 +1,27 @@
-<div class="default">
-  <section>
-    <app-header *ngIf="currentUrl && !isCheckoutRoute()"></app-header>
-    <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
-    <app-loading-indicator></app-loading-indicator>
-    <app-notification></app-notification>
+<div class="app-body slide" [ngStyle]="{'background-position-y' : scroll + 'px'}">
 
-    <main class="body container">
-      <router-outlet></router-outlet>
-    </main>
+  <div class="back-drop-slide vivify" [ngClass]="{'fadeIn' : scroll === -350, 'fadeOut' : scroll !== -350}"></div>
 
-    <app-checkout-footer *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-footer>
-    <app-footer *ngIf="currentUrl && !isCheckoutRoute()"></app-footer>
-  </section>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <app-nav-side (navigate)="scrollNavigate($event)"></app-nav-side>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row section">
+      <div class="col-lg-offset-2 col-lg-10">
+        <app-navigation *ngIf="currentUrl && !isCheckoutRoute()"></app-navigation>
+        <app-checkout-header [currentStep]="currentStep" *ngIf="currentUrl && isCheckoutRoute()"></app-checkout-header>
+        <app-loading-indicator></app-loading-indicator>
+        <app-notification></app-notification>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pie -->
+  <app-footer></app-footer>
 </div>

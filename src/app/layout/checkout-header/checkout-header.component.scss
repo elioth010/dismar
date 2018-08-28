@@ -1,11 +1,13 @@
+@import "../../../variables";
+
 .checkout-header {
 	padding: 20px 0;
   height: 78px;
-	border-bottom: 1px solid #f5f5f6;
   // position: fixed;
 	width: 100%;
 	z-index: 1;
-	background: #fff;
+  margin-top: map_get($app-properties, m-top);
+
 	.full-container {
 		max-width: 980px;
 		margin: 0 auto;

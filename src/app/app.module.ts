@@ -30,15 +30,32 @@ import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/finally';
 import 'rxjs/add/observable/of';
+import { AboutComponent } from './home/content/about/about.component';
+import { WelcomeComponent } from './home/content/welcome/welcome.component';
+import {FragmentPolyfillModule} from "./fragment-polyfill";
+import { ContactComponent } from './home/content/contact/contact.component';
+import {ProductComponent} from "./product/product.component";
+
+// Services
+import { NavigationServiceService } from './shared/services/navigation-service.service';
+import { ProductsComponent } from './home/content/products/products.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CheckoutHeaderComponent,
-    CheckoutFooterComponent
+    CheckoutFooterComponent,
+    AboutComponent,
+    WelcomeComponent,
+    ProductComponent,
+    ContactComponent,
+    ProductsComponent
   ],
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    FragmentPolyfillModule.forRoot({
+      smooth: true
+    }),
+    RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, { metaReducers }),
 
     /**
@@ -68,9 +85,9 @@ import 'rxjs/add/observable/of';
     HomeModule,
     LayoutModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
-  providers: [],
+  providers: [NavigationServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

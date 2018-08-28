@@ -21,6 +21,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "vivify.min.css",
         "styles.scss",
         "../node_modules/font-awesome/css/font-awesome.css"
       ],
@@ -28,7 +29,7 @@
       "environmentSource": "environments/environment.ts",
       "environments": {
         "mock": "environments/environment.mock.ts",
-        "dev": "environments/environment.ts",        
+        "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
     }

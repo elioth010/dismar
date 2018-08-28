@@ -1,11 +1,25 @@
+@import "variables";
+@import "material-icons";
+
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: "Whitney-semi-bold";
-    src: url("assets/WhitneyHTF-SemiBold.woff") format("woff")
+  font-family: "Whitney-semi-bold";
+  src: url("assets/WhitneyHTF-SemiBold.woff") format("woff");
 }
+
 @font-face {
-    font-family: "Whitney";
-    src: url("assets/WhitneyHTF-Book.woff") format("woff")
+  font-family: "Whitney";
+  src: url("assets/WhitneyHTF-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat-Light";
+  src: url("assets/WebFonts/original_Montserrat-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("assets/WebFonts/original_Montserrat-Bold.woff") format("woff");
 }
 
 // bootstrap fonts
@@ -15,12 +29,17 @@ $icon-font-path: "../node_modules/bootstrap-sass/assets/fonts/bootstrap/";
 @import "app/shared/scss/custom_bootstrap";
 
 body {
-  font-size: 15px;
   line-height: 1.5;
-  color: #ebe0d7#fed;
-  background-color: #f9f8f6#fff;
+  color: #ebe0d7;
+  //background-color: #1b6d85;
+  //background-color: rgba(48, 210, 255, 0.5);
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, label, p, span, div {
+  font-family: $primary-font;
+  font-size: 2rem;
 }
 
 .col-centered {
@@ -50,6 +69,13 @@ body {
   cursor: url('/assets/comingsoon.png'), auto !important;
 }
 
-html {
-overflow-y: scroll;
+/*
+Components
+ */
+
+app-navigation {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  z-index: 999999;
 }

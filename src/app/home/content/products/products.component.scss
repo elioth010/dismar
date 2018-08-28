@@ -1,0 +1,108 @@
+@import "../../../../variables";
+
+$product-h: 250;
+
+.row {
+  &:first-child {
+    margin-top: map_get($app-properties, m-top);
+
+    .product {
+      height: auto;
+      margin-bottom: 16px;
+
+      .product-content {
+        min-height: #{$product-h}px;
+        position: relative;
+        background-size: cover !important;
+        background-position: center !important;
+        border-radius: 6px;
+
+        .product-inner-content {
+          display: flex;
+          height: #{$product-h}px;
+          width: 100%;
+          background-color: transparent;
+          position: relative;
+          border-radius: 6px;
+          justify-content: center;
+          @include transitionElement(background, 250ms, ease-in-out, 0s);
+
+          .product-footer {
+            background-color: #fff;
+            //background: linear-gradient(to bottom, transparent 25%, $primary-color);
+            border-radius: 0 0 6px 6px;
+            width: 100%;
+            //height: #{$product-h / 3}px;
+            position: absolute;
+            bottom: 0px;
+            text-align: center;
+            @include transitionElement(bottom, 500ms, ease-in-out, 0s);
+            @include transitionElement(background, 250ms, ease-in-out, 0s);
+
+            h1 {
+              font-size: 1.2rem;
+              padding: 0;
+              font-weight: bold;
+              color: #546E7A;
+
+              &.product-title {
+                margin: 10px 15px 5px 15px;
+              }
+
+              &.product-price {
+                margin: 5px 15px 10px 15px;
+                color: $primary-color-alternative;
+                font-size: 1.6rem;
+                font-weight: bold;
+              }
+            }
+
+            button {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        .product-content {
+          .product-inner-content {
+            background-color: #{$primary-color}e0;
+            @include transitionElement(background, 250ms, ease-in-out, 0s);
+
+            .product-footer {
+              background-color: transparent;
+              bottom: calc((100% - 90px) / 2);
+              @include transitionElement(bottom, 500ms, ease-in-out, 0s);
+
+              h1 {
+                &.product-title {
+                  font-size: 1.5rem;
+                  color: #fff;
+                }
+                &.product-price {
+                  font-size: 2rem;
+                  color: #fff;
+                }
+              }
+
+              button {
+                display: block;
+                background-color: $primary-color-alternative;
+                color: #fff;
+                border-radius: 100px;
+                border: none;
+                font-size: 1.4rem;
+                margin: 0 auto;
+                padding: 6px 16px;
+
+                @include shadowElement($primary-color-alternative)
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}

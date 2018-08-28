@@ -1,0 +1,13 @@
+<div class="row vivify {{nameClass}}">
+  <div *ngFor="let product of products, let i = index" class="col-lg-3 product vivify popIn delay-{{i}}50" id="{{product.id}}">
+    <div *ngFor="let resource of product.master" class="product-content" [ngStyle]="{'background' : 'transparent url(' + resource.resource + ') no-repeat'}">
+      <div class="product-inner-content">
+        <div class="product-footer">
+          <h1 class="product-title">{{product.name}}</h1>
+          <h1 class="product-price">Q {{product.price}}</h1>
+          <button class="vivify popIn delay-100">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

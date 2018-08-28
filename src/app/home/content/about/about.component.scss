@@ -1,0 +1,45 @@
+@import "../../../../variables";
+app-about {
+  //background: linear-gradient(transparent, #1b6d85 70%);
+  display: block;
+  min-height: $component-height;
+  margin-top: map_get($app-properties, m-top);
+}
+.about {
+  position: relative;
+  padding: 20px 40px;
+  border-radius: 6px;
+  margin-left: 4em;
+  margin-right: 3em;
+
+  h1 {
+    margin: 0 0 30px 0;
+    font-size: 7rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    margin: 15px 0 0 0;
+  }
+
+  p {
+    font-size: 2rem;
+    text-align: justify;
+  }
+
+  label {
+    margin: 50px 0 0 0;
+    font-size: 2rem;
+  }
+
+  .about-img {
+    background: transparent url("../../../../assets/about.jpg") no-repeat center center;
+    width: 300px;
+    height: 300px;
+    display: block;
+    border-radius: 100%;
+    border: 10px solid #fff;
+    margin: 70px 0 0 0;
+  }
+}

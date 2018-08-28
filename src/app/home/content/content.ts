@@ -9,7 +9,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
     <app-customize></app-customize>
     <app-product-list [(toggleLayout)]='toggleLayout' [products]='products' [taxonIds]="taxonIds"></app-product-list>
   `,
-//   styleUrls: ['./content-header.component.scss']
+//   styleUrls: ['./content-navigation.component.scss']
 })
 export class ContentComponent implements OnInit {
   @Input() products: Product[];

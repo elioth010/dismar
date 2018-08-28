@@ -1,0 +1,48 @@
+@import "../../../../variables";
+
+.logo {
+  background: transparent url("../../../../assets/" + $logo) no-repeat center left;
+  background-size: contain;
+  height: 75px;
+  display: block;
+  margin: 25px 0 25px 15px;
+}
+
+.nav {
+  position: fixed;
+
+  li {
+    a {
+      background-color: transparent;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        font-weight: 600;
+      }
+
+      span {
+        &.indicator {
+          width: 30px;
+          height: 4px;
+          display: block;
+          background-color: transparent;
+        }
+      }
+    }
+
+    &.active {
+      a {
+        span {
+          &.indicator {
+            background-color: $alternative-color;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

@@ -11,12 +11,12 @@ import { AuthService } from '../../core/services/auth.service';
 import { AuthActions } from '../../auth/actions/auth.actions';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrls: ['./navigation.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HeaderComponent implements OnInit {
+export class NavigationComponent implements OnInit {
   isAuthenticated: Observable<boolean>;
   totalCartItems: Observable<number>;
   taxonomies$: Observable<any>;

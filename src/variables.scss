@@ -1,0 +1,38 @@
+/*Colors*/
+$primary-color: #0086C5;
+$primary-color-alternative: #001A1E;
+$secondary-color: #BBE3EF;
+$alternative-color: #FFF600;
+
+/*Fonts*/
+$primary-font: 'Montserrat-Light', sans-serif;
+$secondary-font: 'Montserrat-Bold', sans-serif;
+
+/*-----*/
+$logo: 'logo.png';
+$background-primary: 'bg-mod.png';
+
+/*Generic*/
+
+$app-properties: (
+  m-top: 65px,
+  height: 100vh,
+  width: 100%,
+);
+
+$component-height: 85vh;
+
+/*
+MIXINS
+ */
+@mixin shadowElement($color) {
+  box-shadow: 0 2px 12px 0 #{$color}80;
+}
+
+@mixin transitionElement($property: [], $duration: [], $timing: [], $delay: []) {
+  -webkit-transition: $property $duration $timing $delay;
+  -moz-transition: $property $duration $timing $delay;
+  -ms-transition: $property $duration $timing $delay;
+  -o-transition: $property $duration $timing $delay;
+  transition: $property $duration $timing $delay;
+}
